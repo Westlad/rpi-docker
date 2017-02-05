@@ -1,0 +1,4 @@
+#! /bin/bash
+docker rm temperature
+docker run -v /home/pi/go:/home/pi/go --net microservices --name temperature -d westlad/temperature
+

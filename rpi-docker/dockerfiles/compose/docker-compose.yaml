@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+
+  nginx:
+    image: westlad/nginx
+    ports:
+     - "80:80"
+    volumes:
+     - /home/pi/dockerfiles/nginx/nginx:/tmp/nginx
+  temperature:
+    image: westlad/temperature
+    volumes: 
+     - /home/pi/go:/home/pi/go
+  heater:
+    image: westlad/heater
+    volumes:
+     - /home/pi/go:/home/pi/go
+    devices:
+     - /dev/gpiomem:/dev/gpiomem

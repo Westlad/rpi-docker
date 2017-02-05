@@ -1,0 +1,2 @@
+#! /bin/bash
+docker run -v /home/pi/dockerfiles/nginx/nginx:/tmp/nginx --net microservices --name nginx -d -p80:80 westlad/nginx

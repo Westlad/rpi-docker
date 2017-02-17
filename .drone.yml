@@ -1,6 +1,6 @@
 build:
   image: golang
   commands:
-    - go get
+    - go get go/temperature
     - go build
     - go test
